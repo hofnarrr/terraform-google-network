@@ -35,17 +35,17 @@ variable "shared_vpc_host" {
 }
 
 variable "subnets" {
-  type        = list(map(string))
+  type        = list(map(any))
   description = "The list of subnets being created"
 }
 
 variable "secondary_ranges" {
-  type        = list(map(object))
+  type        = list(map(any))
   description = "Secondary ranges that will be used in some of the subnets"
 }
 
 variable "routes" {
-  type        = list(map(string))
+  type        = list(map(any))
   description = "List of routes being created in this VPC"
   default     = []
 }
